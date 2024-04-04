@@ -11,6 +11,7 @@ function isPali(str){
     for(let i = 0; i < lun / 2; i++){
         console.log(`Indice di posizione ` + i);
         if(str[i] !== str[lun - i - 1]){
+            flag = false;
             return flag;
         }else {
             flag = true;
@@ -26,3 +27,32 @@ function isPali(str){
 * return flag = true se non ci sono stati problemi
 * restituisce flag al falso se invece nel controllo le lettere non combaciano
 */
+
+/**
+ * Funzione che genera in maniera randomica un numero da 1 a 5
+ * @param {*} min
+ * @param {*} max
+ * @returns {number}
+ */
+function rndNum (min,max){
+    const res = Math.floor(Math.random()* (max - min) + 1) - min;
+    return res;
+}
+
+/**
+ * Funzione che controlla tramite l'operatore '%' il resto se zero even o odd;
+ * @param {*} num1
+ * @param {*} num2
+ * @returns {string}
+ */
+function isEven(num1, num2) {
+    const sum = num1 + num2;
+    let even = "pari";
+    let odd = "dispari";
+
+    if(sum % 2 === 0){
+        return even;
+    } else {
+        return odd;
+    }
+}
